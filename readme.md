@@ -36,7 +36,7 @@ The output will display stock price trends and Z-score analysis, highlighting bu
 
 ## How It Works
 - Fetching Stock Data: Uses yfinance to retrieve daily historical stock prices.
-- Rolling Z-Score Computation: Calculates rolling means and standard deviations for multiple windows, then computes Z-scores as: z_score = (price - rolling_mean) / rolling_std
+- Rolling Z-Score Computation: Calculates rolling means and standard deviations for multiple windows, then computes Z-scores as: ```z_score = (price - rolling_mean) / rolling_std```
 - Signal Identification: Marks buy/sell signals when the Z-score crosses below or above the threshold (-2, 2).
 - Visualization: Displays stock price trends and overlays Z-scores for analysis.
 
