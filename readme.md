@@ -17,20 +17,20 @@ This project analyzes stock price trends using rolling Z-scores to identify pote
 
 ## Installation
 Clone the repository:
-git clone <repository_url>
+```git clone <repository_url>```
 
 Install required dependencies:
-pip install pandas matplotlib yfinance
+```pip install pandas matplotlib yfinance```
 
 ## Usage
 Modify the constants in the script to change stock ticker and analysis period:
-
+```
 TICKER_SYMBOL = 'ESTC'
 START_DATE = '2020-01-01'
 ENDING_DATE = '2025-01-31'
-
+```
 Run the script:
-python script.py
+```python script.py```
 
 The output will display stock price trends and Z-score analysis, highlighting buy/sell signals.
 
