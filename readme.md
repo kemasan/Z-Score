@@ -43,10 +43,8 @@ The output will display stock price trends and Z-score analysis, highlighting bu
 ### Z-Score Calculation and Trading Signals
 The Z-score calculation quantifies how far a stock's price has deviated from its typical behavior over the past 5 years. By applying this method to multiple rolling windows, we can identify both short-term anomalies and Z-scores that exceed thresholds such as ±1.5 or ±2.0, acting as alerts for potential action. Adjusting the Z-score threshold can help to align the signals with the chosen trading strategy.
 
-### Above the threshold: 
-Indicates a potential sell point due to overvaluation.
-### Below the threshold: 
-Indicates a potential buy signal when the stock is undervalued.
+- Above the threshold: Indicates a potential sell point due to overvaluation.
+- Below the threshold: Indicates a potential buy signal when the stock is undervalued.
 
 ### Notes: 
 - Ensure you have an active internet connection to fetch stock data.
