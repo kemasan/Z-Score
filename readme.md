@@ -1,7 +1,7 @@
 # 📈 Market Anomaly Detection: Rolling Z-Score Framework
 
 ### 🎯 The Business Question: "How can we identify statistically significant price deviations to detect market manipulation or extreme over/undervaluation?"
-In high-volatility markets (like Crypto and Tech stocks), price "noise" makes it hard to see real risks. This project provides a mathematical tool to filter that noise and identify anomalies—events that happen in the outer 5% of historical probability.
+In high-volatility markets (like Crypto and Tech stocks), price "noise" makes it hard to see real risks. This project provides a mathematical tool to filter that noise and identify anomalies, events that happen in the outer 5% of historical probability.
 
 ### 📊 Methodology
 I developed a Python-based framework that transforms raw price data into a Normal Distribution model using: 
