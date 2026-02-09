@@ -8,7 +8,7 @@ In high-volatility markets (like Crypto and Tech stocks), price "noise" makes it
 ### 📊 Methodology
 I developed a Python-based framework that transforms raw price data into a Normal Distribution model using: 
   - Rolling Mean & Standard Deviation:To account for changing market conditions.
-  - Normalization: Calculating Z = (Price - Rolling Mean \mu) / Standard Deviation \sigma$ to compare different assets on a single scale.
+  - Normalization: Calculating Z = (Price - Rolling Mean) / Standard Deviation to compare different assets on a single scale.
 
 ### 🧠 Strategic Assumptions
 1. Mean Reversion: I assume prices eventually return to their historical average after an extreme event.
