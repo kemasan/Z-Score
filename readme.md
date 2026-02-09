@@ -15,7 +15,7 @@ I developed a Python-based framework that transforms raw price data into a Norma
 2. The 95% Rule: I define any price move with a Z-score beyond +/-2.0 as a critical anomaly requiring investigation.
 3. Time Windows: I analyzed 30, 60, and 90-day windows to balance short-term "spikes" against long-term trend shifts.
 
-###⚖️ Risk Trade-offs & Analysis
+### ⚖️ Risk Trade-offs & Analysis
   - Sensitivity vs. Accuracy (The 80/20 Rule): * A 30-day window catches risks faster but produces more "false alarms."
     - A 90-day window is more reliable for major trends but can be slow to react to a "flash crash.
   - "Threshold Adjustment: * Using a 1.5 threshold increases the "Buy/Sell" signals by 30%, but lowers the quality of the intelligence. I focus on 2.0 to ensure only the most significant risks are flagged.
