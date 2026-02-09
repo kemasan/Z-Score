@@ -6,7 +6,7 @@ In high-volatility markets (like Crypto and Tech stocks), price "noise" makes it
 ### 📊 Methodology
 I developed a Python-based framework that transforms raw price data into a Normal Distribution model using: 
   - Rolling Mean & Standard Deviation:To account for changing market conditions.
-  - Normalization: Calculating Z = (Price - Rolling Mean) / Standard Deviation to compare different assets on a single scale.
+  - Normalization: Calculating Z score = (Price - Rolling Mean) / Standard Deviation to compare different assets on a single scale.
 
 ### 🧠 Strategic Assumptions
 1. Mean Reversion: I assume prices eventually return to their historical average after an extreme event.
@@ -26,8 +26,8 @@ I developed a Python-based framework that transforms raw price data into a Norma
   - Conclusion Change: If the market enters a period of "Hyper-volatility" (e.g., a Black Swan event), the Z-score logic may fail as the "Standard Deviation" expands too fast.
   - Actionable Insight: This tool is best used as an early-warning system alongside OSINT (social media monitoring) to confirm if a price drop is a technical glitch or a fundamental protocol failure.
     
-### 🛠️ Tech StackLanguage: 
-  - Python
+### 🛠️ Tech Stack
+  - Language: Python
   - Libraries: Pandas, Matplotlib, yFinance
   - Environment: Jupyter Notebook / VSCode
 
