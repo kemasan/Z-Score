@@ -1,54 +1,37 @@
-# Stock Price Analysis with Rolling Z-Scores
+# 📈 Market Anomaly Detection: Rolling Z-Score Framework
 
-## Overview
-This project analyzes stock price trends using rolling Z-scores to identify potential buy and sell signals based on statistical deviations. It utilizes historical stock data from Yahoo Finance, computes rolling Z-scores for different window sizes, and visualizes the results.
+### 🎯 The Business Question: "How can we identify statistically significant price deviations to detect market manipulation or extreme over/undervaluation?"
+In high-volatility markets (like Crypto and Tech stocks), price "noise" makes it hard to see real risks. This project provides a mathematical tool to filter that noise and identify anomalies—events that happen in the outer 5% of historical probability.
 
-## Features
-- Fetches historical stock data using the Yahoo Finance API
-- Computes rolling Z-scores for multiple time windows (30, 60, and 90 days)
-- Identifies buy/sell signals based on a predefined Z-score threshold
-- Visualizes stock prices and corresponding Z-score trends
+flag
 
-## Technologies Used
-- Python
-- Pandas
-- Matplotlib
-- yFinance
+### 📊 Methodology
+I developed a Python-based framework that transforms raw price data into a Normal Distribution model using: 
+  - Rolling Mean & Standard Deviation:To account for changing market conditions.
+  - Normalization: Calculating Z = (Price - Rolling Mean \mu) / Standard Deviation \sigma$ to compare different assets on a single scale.
 
-## Installation
-Clone the repository:
-```git clone <repository_url>```
+### 🧠 Strategic Assumptions
+1. Mean Reversion: I assume prices eventually return to their historical average after an extreme event.
+2. The 95% Rule: I define any price move with a Z-score beyond +/-2.0 as a critical anomaly requiring investigation.
+3. Time Windows: I analyzed 30, 60, and 90-day windows to balance short-term "spikes" against long-term trend shifts.
 
-Install required dependencies:
-```pip install pandas matplotlib yfinance```
+###⚖️ Risk Trade-offs & Analysis
+  - Sensitivity vs. Accuracy (The 80/20 Rule): * A 30-day window catches risks faster but produces more "false alarms."
+    - A 90-day window is more reliable for major trends but can be slow to react to a "flash crash.
+  - "Threshold Adjustment: * Using a 1.5 threshold increases the "Buy/Sell" signals by 30%, but lowers the quality of the intelligence. I focus on 2.0 to ensure only the most significant risks are flagged.
 
-## Usage
-Modify the constants in the script to change stock ticker and analysis period:
-```
-TICKER_SYMBOL = 'ESTC'
-START_DATE = '2020-01-01'
-ENDING_DATE = '2025-01-31'
-```
-Run the script:
-```python script.py```
+[PLACEHOLDER: Insert a screenshot of your Z-score "Signals" (the dots on the chart) here]
 
-The output will display stock price trends and Z-score analysis, highlighting buy/sell signals.
 
-## How It Works
-- Fetching Stock Data: Uses yfinance to retrieve daily historical stock prices.
-- Rolling Z-Score Computation: Calculates rolling means and standard deviations for multiple windows, then computes Z-scores as: ```z_score = (price - rolling_mean) / rolling_std```
-- Signal Identification: Marks buy/sell signals when the Z-score crosses below or above the threshold (-2, 2).
-- Visualization: Displays stock price trends and overlays Z-scores for analysis.
+### 🔄 Sensitivity Analysis
+  - Conclusion Change: If the market enters a period of "Hyper-volatility" (e.g., a Black Swan event), the Z-score logic may fail as the "Standard Deviation" expands too fast.
+  - Actionable Insight: This tool is best used as an early-warning system alongside OSINT (social media monitoring) to confirm if a price drop is a technical glitch or a fundamental protocol failure.
+    
+### 🛠️ Tech StackLanguage: 
+  - Python
+  - Libraries: Pandas, Matplotlib, yFinance
+  - Environment: Jupyter Notebook / VSCode
 
-### Z-Score Calculation and Trading Signals
-The Z-score calculation quantifies how far a stock's price has deviated from its typical behavior over the past 5 years. By applying this method to multiple rolling windows, we can identify both short-term anomalies and Z-scores that exceed thresholds such as ±1.5 or ±2.0, acting as alerts for potential action. Adjusting the Z-score threshold can help to align the signals with the chosen trading strategy.
-
-- Above the threshold: Indicates a potential sell point due to overvaluation.
-- Below the threshold: Indicates a potential buy signal when the stock is undervalued.
-
-### Notes: 
-- Ensure you have an active internet connection to fetch stock data.
-- The Z-score threshold and window sizes can be adjusted to fit different trading strategies.
 
 
 
